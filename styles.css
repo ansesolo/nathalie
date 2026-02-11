@@ -268,7 +268,6 @@ address { font-style: normal; }
     gap: 15px;
     border-radius: 25px;
     width: 100%;
-    max-width: 600px;
     aspect-ratio: 3060 / 2743;
     box-sizing: border-box;
 }
@@ -348,12 +347,16 @@ address { font-style: normal; }
 
 .pour_qui__images {
     width: 100%;
-    aspect-ratio: 519 / 800;
+    aspect-ratio: 1 / 1;
     background-image: var(--image-portrait-url);
     background-size: cover;
     background-position: top center;
     border-radius: 20px;
     background-repeat: no-repeat;
+}
+
+#pour-qui .section__text {
+    aspect-ratio: 1 / 1;
 }
 
 /* ============================================================
@@ -573,7 +576,7 @@ address { font-style: normal; }
   .section__body {
     grid-template-columns: 1fr;
    }
-  .approche__images { max-width: 500px; }
+  .approche__images { max-width: 100%; }
 
   .pour-qui__grid { grid-template-columns: 1fr; }
   .pour-qui__image-large img { aspect-ratio: 16 / 10; }
