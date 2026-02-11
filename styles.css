@@ -25,6 +25,9 @@
 
   --image-ambiance-url: url('images/approche_ambiance.jpg');
   --image-portrait-url: url('images/portrait.jpg');
+  --image-lampe-url: url('images/lampe.jpg');
+  --image-tableau-url: url('images/tableau.jpg');
+  --image-coucher_soleil-url: url('images/coucher_soleil.jpg');
 }
 
 /* ---------- RESET ---------- */
@@ -360,88 +363,26 @@ address { font-style: normal; }
 }
 
 /* ============================================================
-   OBJECTIFS — Texte à gauche, image à droite
+   SECTIONS 4-6 — Images en background (même pattern que 2-3)
    ============================================================ */
-.objectifs {
-  padding: var(--section-padding) 0;
-  background: var(--color-beige);
-}
-
-.objectifs__container {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 0 clamp(1rem, 3vw, 2rem);
-  display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: calc(var(--gap) * 2);
-  align-items: center;
-}
-
-.objectifs__title {
-  font-family: var(--font-body);
-  font-size: clamp(1.4rem, 2.5vw, 2rem);
-  margin-bottom: 1.5rem;
-  color: var(--color-black);
-}
-
-.objectifs__text p {
-  margin-bottom: 1.25rem;
-  line-height: 1.8;
-}
-
 .objectifs__image {
   width: 100%;
-  aspect-ratio: 3 / 4;
-  object-fit: cover;
-  border-radius: 12px;
-}
-
-/* ============================================================
-   DÉMARCHE — Image à gauche, texte à droite
-   ============================================================ */
-.demarche {
-  padding: var(--section-padding) 0;
-  background: var(--color-beige);
-}
-
-.demarche__container {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 0 clamp(1rem, 3vw, 2rem);
-  display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: calc(var(--gap) * 2);
-  align-items: center;
+  aspect-ratio: 1 / 1;
+  background-image: var(--image-lampe-url);
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  background-repeat: no-repeat;
 }
 
 .demarche__image {
   width: 100%;
-  aspect-ratio: 3 / 4;
-  object-fit: cover;
-  border-radius: 12px;
-}
-
-.demarche__text p {
-  margin-bottom: 1.25rem;
-  line-height: 1.8;
-}
-
-/* ============================================================
-   FORMATIONS — 2 images empilées à gauche, texte à droite
-   ============================================================ */
-.formations {
-  padding: var(--section-padding) 0;
-  background: var(--color-beige);
-}
-
-.formations__container {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 0 clamp(1rem, 3vw, 2rem);
-  display: grid;
-  grid-template-columns: 0.8fr 1.2fr;
-  gap: calc(var(--gap) * 2);
-  align-items: start;
+  aspect-ratio: 1 / 1;
+  background-image: var(--image-tableau-url);
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  background-repeat: no-repeat;
 }
 
 .formations__images {
@@ -449,18 +390,15 @@ address { font-style: normal; }
   flex-direction: column;
   gap: 1rem;
 }
+
 .formations__image {
   width: 100%;
   aspect-ratio: 1 / 1;
-  object-fit: cover;
-  border-radius: 12px;
-}
-
-.formations__title {
-  font-family: var(--font-body);
-  font-size: clamp(1.4rem, 2.5vw, 2rem);
-  margin-bottom: 1.5rem;
-  color: var(--color-black);
+  background-image: var(--image-coucher_soleil-url);
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  background-repeat: no-repeat;
 }
 
 .formations__list { padding: 0; }
@@ -583,16 +521,8 @@ address { font-style: normal; }
   .pour-qui__cards { flex-direction: row; }
   .pour-qui__card { flex: 1; }
 
-  .objectifs__container { grid-template-columns: 1fr; }
-  .objectifs__image-wrapper { order: -1; max-width: 400px; margin: 0 auto; }
-
-  .demarche__container { grid-template-columns: 1fr; }
-  .demarche__image-wrapper { max-width: 400px; margin: 0 auto; }
-
-  .formations__container { grid-template-columns: 1fr; }
   .formations__images {
     flex-direction: row;
-    max-width: 500px;
   }
 }
 
