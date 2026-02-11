@@ -570,7 +570,7 @@ address { font-style: normal; }
   .hero { min-height: 70vh; }
   .hero__content { min-height: 70vh; }
 
-  .approche__body {
+  .section__body {
     grid-template-columns: 1fr;
    }
   .approche__images { max-width: 500px; }
