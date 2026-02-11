@@ -411,12 +411,17 @@ address { font-style: normal; }
   background-position: center bottom;
 }
 
+#formations .section__text {
+  font-size: clamp(0.85rem, 0.8rem + 0.2vw, 1rem);
+  line-height: 1.5;
+}
+
 .formations__list { padding: 0; }
 .formations__list li {
   position: relative;
   padding-left: 1.25rem;
-  margin-bottom: 0.5rem;
-  line-height: 1.7;
+  margin-bottom: 0.35rem;
+  line-height: 1.5;
 }
 .formations__list li::before {
   content: '';
@@ -429,8 +434,8 @@ address { font-style: normal; }
 }
 
 .formations__separator {
-  margin-top: 1rem;
-  line-height: 1.7;
+  margin-top: 0.75rem;
+  line-height: 1.5;
 }
 
 .formations__public {
