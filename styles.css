@@ -386,19 +386,29 @@ address { font-style: normal; }
 }
 
 .formations__images {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 15px;
+  width: 100%;
+  aspect-ratio: 1 / 1;
 }
 
 .formations__image {
   width: 100%;
-  aspect-ratio: 1 / 1;
   background-image: var(--image-coucher_soleil-url);
-  background-size: cover;
-  background-position: center;
   border-radius: 20px;
   background-repeat: no-repeat;
+  background-size: 100% 200%;
+}
+
+/* Moitié haute de l'image */
+.formations__image--haut {
+  background-position: center top;
+}
+
+/* Moitié basse de l'image */
+.formations__image--bas {
+  background-position: center bottom;
 }
 
 .formations__list { padding: 0; }
@@ -522,7 +532,7 @@ address { font-style: normal; }
   .pour-qui__card { flex: 1; }
 
   .formations__images {
-    flex-direction: row;
+    grid-template-rows: 1fr 1fr;
   }
 }
 
