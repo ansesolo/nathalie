@@ -50,12 +50,15 @@
   function updateActiveLink() {
     var scrollPos = window.scrollY + window.innerHeight / 3;
     var current = '';
+    var atBottom = (window.innerHeight + window.scrollY) >= (document.body.offsetHeight - 50);
 
     sections.forEach(function (section) {
       if (scrollPos >= section.offsetTop) {
         current = section.getAttribute('id');
       }
     });
+
+    if (atBottom) current = 'contact';
 
     navLinks.forEach(function (link) {
       link.classList.remove('nav__link--active');

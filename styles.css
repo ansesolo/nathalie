@@ -112,7 +112,10 @@ address { font-style: normal; }
   height: 100%;
 }
 
-.nav__identity { display: flex; flex-direction: column; gap: 0; line-height: 1.2; }
+.nav__logo-img { display: flex; align-items: center; flex-shrink: 0; transform: translateY(0.35em); }
+.nav__logo-icon { height: clamp(4rem, 7vw, 5.5rem); width: auto; }
+
+.nav__identity { display: flex; flex-direction: column; gap: 0; line-height: 1.2; margin-left: 0.5rem; margin-right: auto; }
 
 .nav__logo { display: flex; gap: 0.4em; }
 .nav__name, .nav__surname {
@@ -159,11 +162,11 @@ address { font-style: normal; }
 .nav__list {
   display: flex;
   align-items: center;
-  gap: clamp(1.5rem, 6vw, 5rem);
+  gap: clamp(2rem, 4vw, 3.5rem);
 }
 .nav__link {
   font-family: var(--font-ui);
-  font-size: 0.9rem;
+  font-size: clamp(0.95rem, 1.2vw, 1.15rem);
   font-weight: 700;
   color: var(--color-black);
   letter-spacing: 0.02em;
